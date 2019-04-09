@@ -5,8 +5,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src = "main.js"></script>
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.0/TweenMax.min.js"></script>
+  <script src ="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src = "main.js"></script>
 
 </head>
@@ -15,15 +16,16 @@
   AOS.init();
 </script>
 
+<span id="circle" class="circle"></span>
   <div class = "nav-bar">
-    <a href = "index.html" class = "navigate link-one">Zhou Lab
+    <div class = "nav-1-container"><a href = "index.html" class = "navigate link-one">Zhou Lab
       <!--<div style = "display: inline-block; font-size: 10px;">The University of Texas at Arlington</div>-->
-    </a><!--
-    --><div class = "menu" onclick = "menuDown()">
+    </a></div><!--
+    --><div class = "menu-container"><div class = "menu" onmouseover = "cursorCircle()" onmouseout = "cursorCircle()" onclick = "menuDown()">
         <div class = "line1"></div>
         <div class = "line2"></div>
         <div class = "line3"></div>
-    </div>
+    </div></div>
 </div>
 <div class = "navigation-content">
   <div class = "nav-con-container">
@@ -38,14 +40,25 @@
 </div>
 </div>
 
-<div class = "top-container"  >
-  <div class = "image-container"  data-aos="fade-right" data-aos-duration="3000">
-    <img src = "images/professor-top.jpg" class = "profile-picture-top">
-    <img src = "images/professor-bottom.jpg" class = "profile-picture-bottom">
-  </div>
+<div class = "top-container">
+  <div class = "image-container" data-aos="fade-up" data-aos-duration="3000">
+    <div class = "image-flex">
+      <img src = "images/hero-image-three.jpg" class = "hero1">
 
-  <div class = "welcome-text"  >
-    <div class = "name" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="500"><div style = "white-space: nowrap;">WELCOME TO</div> <div style = "white-space: nowrap;">ZHOU LAB</div></div>
+      <div class = "hero2">
+        <!--<img src = "images/professor-top.jpg" class = "profile-picture-top">
+        <img src = "images/professor-bottom.jpg" class = "profile-picture-bottom">-->
+        <!--<img src = "images/hero-image.jpg" class = "hero1" >-->
+        <img src = "images/hero-image-two.jpg">
+      </div>
+      <div class = "hero3">
+        <img src = "images/hero-image.jpg"  >
+      </div>
+    </div>
+  </div>
+  <div class = "welcome-text">
+    <div class = "name" ><div data-aos="fade-left" data-aos-duration="3000" data-aos-delay="500"><div class = "a-top" >WELCOME TO</div></div>
+    <div data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1000"><div class = "b-top" >ZHOU LAB</div></div></div>
 
   </div>
   <div class = "arrow" >
@@ -64,8 +77,8 @@
         RESEARCH HIGHLIGHTS
 
       </div>
-      <div class = "welcome-text-description">
-        Led by Professor <div class = "welcome-hover a">Weidong Zhou</div>,
+      <div class = "welcome-text-description" data-aos="fade">
+        Led by Professor <div class = "welcome-hover">Weidong Zhou</div>,
         our group is working on various optoelectronic and nanophotonic devices
         and integrated chips, with a mission towards scaling of these devices
         with extreme performance and novel functionalities for integrated intelligent
@@ -111,11 +124,10 @@ Graphene Total Absorption in Critically Coupled Photonic Crystal Cavities on Gla
                 </div>
       </div>
       <div class = "research image-6"data-aos="fade" >
-        <img src = "slideshow/Si-InGaAs FPA.jpg" height = "300px" width = "300px">
+        <img src = "slideshow/SiN microdisk.jpg" height = "300px" width = "300px">
         <div class = "research-descriptor">
-          <h1>Multi-Band Imager</h1>
-
-          Transfer-Printed 4color Si-InGaAs Membrane Imager
+          <h1> Of Science</h1>
+              what goes here?
                 </div>
       </div>
 
@@ -191,7 +203,7 @@ Graphene Total Absorption in Critically Coupled Photonic Crystal Cavities on Gla
 </div>
 
 <div class = "open-positions-container">
-  <div class="circle">
+  <div class="circle-positions">
 
  </div>
  <img src = "circle-text.png" class = "circle-text">
@@ -213,6 +225,7 @@ Graphene Total Absorption in Critically Coupled Photonic Crystal Cavities on Gla
     © Zhou Lab 2019
 
   </div>
+</div>
 <script>
 function backgroundChange(a) {
 
@@ -379,6 +392,106 @@ function arrowCreation() {
         <!--
         -->
         */
+        jQuery(document).ready(function() {
+
+  var mouseX = 100; mouseY = 150;
+  var xp = 0, yp = 0;
+
+  $(document).mousemove(function(e){
+    mouseX = e.pageX - 30;
+    mouseY = e.pageY - 30;
+  });
+
+  setInterval(function(){
+    xp += ((mouseX - xp)/6);
+    yp += ((mouseY - yp)/6);
+    $("#circle").css({left: xp +'px', top: yp +'px'});
+  }, 20);
+
+});
+  </script>
+  <script>
+  $(document).mousemove(function(event) {
+      if (event.pageX < 50) {
+          document.querySelector('.hero1').style = "display: none;";
+          document.querySelector('.hero2').style = "display: auto;";
+          document.querySelector('.hero3').style = "display: none;";
+          //console.log("left");
+      }
+      else if (event.pageX >1000) {
+        document.querySelector('.hero1').style = "display: none;";
+        document.querySelector('.hero2').style = "display: none;";
+        document.querySelector('.hero3').style = "display: auto;";
+      }
+      else {
+        document.querySelector('.hero1').style  = "display: auto;";
+        document.querySelector('.hero2').stlye  = "display: none;";
+        document.querySelector('.hero3').style  = "display: none;";
+        //console.log("right");
+      }
+  });
+  var circleBoolean = true;
+  function cursorCircle() {
+    if (circleBoolean) {
+      document.querySelector('.circle').style = "border-radius: 0%;";
+      circleBoolean = false;
+    }
+    else {
+      document.querySelector('.circle').style = "border-radius: 50%;";
+      circleBoolean = true;
+    }
+  }
+
+  document.body.addEventListener("mousemove", function(e) {
+
+    var x = (e.clientX)/50;
+    var y = (e.clientY)/50;
+    //console.log(y);
+    var a = document.querySelector('.a');
+    var b = document.querySelector('.b');
+    var c = document.querySelector('.image-flex');
+    //c.style.transform = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+
+
+    //a.style.transform = "translateX(-22vw) rotateZ(" + x + "deg)";
+    //b.style.transform = "translateX(12vw) rotateZ(" + x + "deg)";
+
+    //translateX(" + x + "px) translateY(" + y + "px)
+    //a.transform = "translateX(" + x + "px)";
+    //b.transform = "translateX(" + y + "px)";
+
+  });
+
+  window.addEventListener("scroll", function() {
+
+    var a = document.querySelector('.a-top');
+    var num = window.scrollY/50 + 22;
+    var num2 = num -10;
+    //console.log(window.scrollY);
+
+    var b = document.querySelector('.b-top');
+    console.log
+    a.style.transform = "translateX(-" + num + "vw)";
+    b.style.transform = "translateX(" + num2 + "vw)";
+    /*var c = document.querySelector('.research-title');
+    var d = document.querySelector('.welcome-text-description');
+    num -= 22;
+    num /= 5;
+    c.style.transform = "translateY(" + num + "vw)";
+    num2 -=12;
+    num2 /= 8;
+    d.style.transform = "translateY(" + num2 + "vw)";
+    var num3 = (1.2) * (num/10);
+    document.querySelector('.image-1').style.transform = "translateY(-" + num3 + "vw)";
+    num3 *= 1.1;
+    document.querySelector('.image-2').style.transform = "translateY(" + num3 + "vw)";
+    document.querySelector('.image-3').style.transform = "translateY(" + num3 + "vw)";
+    document.querySelector('.image-4').style.transform = "translateY(" + num3 + "vw)";
+    document.querySelector('.image-5').style.transform = "translateY(" + num3 + "vw)";
+    document.querySelector('.image-6').style.transform = "translateY(" + num3 + "vw)";
+    */
+  });
+
   </script>
 </body>
 </html>

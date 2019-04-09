@@ -2,9 +2,21 @@ body {
   margin: 0;
   color: black;
   background-color: #f4f4f4;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
   transition: .5s;
   overflow-x: hidden;
+}
+
+.circle {
+	position: absolute;
+  border: solid 1px #ccc;
+	width: 60px;
+	height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+  animation:fadeIn 2s .5s forwards;
 }
 hr {
   border: .5px solid black;
@@ -22,9 +34,10 @@ a {
   height: 5vh;
   font-size: 20px;
   background-color: transparent;
-  width: 100%;
+  width: 95%;
   position: fixed;
   top: 8vh;
+  margin-left: 5%;
   z-index: 2;
   pointer-events: none;
 }
@@ -34,6 +47,30 @@ a {
                                               display: inline-block;
                                               cursor: pointer;
                                               pointer-events: auto;
+                                              padding: 2vh;
+                                              transition: .5s;
+                                            }
+                                            .navigate.link-one {
+                                              width: 50%;
+                                              text-align: left;
+                                              pointer-events: auto;
+                                              display: inline-block;
+                                              transition: .5s;
+                                            }
+                                            .navigate.link-one:hover {
+                                              color: gray;
+                                            }
+                                            .menu-container {
+                                              text-align: right;
+                                              width: 40%;
+                                              display: inline-block;
+                                            }
+                                            .nav-1-container {
+                                              text-align: left;
+                                              width: 55%;
+                                              display: inline-block;
+                                              vertical-align: top;
+                                              margin-top: 1vh;
                                             }
                                             .line1 {
                                               width: 25px;
@@ -59,10 +96,8 @@ a {
                                             .menu:hover .line2 {
                                               width: 25px;
                                             }
-                                            .navigate.link-one {
-                                              margin-right: 83%;
-                                              margin-left: 5%;
-                                              pointer-events: auto;
+                                            .menu:hover {
+                                              background-color: #63d3ff;
                                             }
                                             .navigation-content {
                                               position: fixed;
@@ -109,7 +144,6 @@ a {
   animation: fadeIn 1s .25s forwards;*/
 }
                                         .welcome-text {
-                                          color: black;
                                           display: inline-block;
                                           font-size: 15px;
                                           width: 55vw;
@@ -118,11 +152,13 @@ a {
                                           transform: translateY(-2vh);
                                         }
                                         .name {
-                                          font-size: 10vw;
-                                          margin-top: -10vh;
+                                          font-size: 13vw;
+                                          margin-top: 0vh;
                                           display: inline-block;
-                                          vertical-align: bottom;
+                                          pointer-events: none;
+
                                         }
+
                                         @keyframes fadeInNow {
                                           100% {
                                             opacity: 1;
@@ -130,8 +166,33 @@ a {
                                         }
                                         .image-container {
                                           display: inline-block;
-                                          transition: .5s;
+                                          position: absolute;
+                                          margin-left: 16vw;
+                                          margin-top: 4vh;
+
                                         }
+                                        .image-flex {
+                                          width: 25vw;
+                                          height: 63vh;
+                                          overflow: hidden;
+                                        }
+                                        .image-container img {
+                                          filter: brightness(50%);
+                                        }
+                                        .image-flex img {
+                                          height: 63vh;
+                                        }
+                                        .a-top, .b-top {
+                                          transition: 0s;
+                                          white-space: nowrap;
+                                        }
+                                        .a-top {
+                                          transform: translateX(-22vw);
+                                        }
+                                        .b-top {
+                                          transform: translateX(12vw);
+                                        }
+                                        /*
                                         .image-container:hover {
                                           filter: brightness(80%);
                                         }
@@ -141,11 +202,13 @@ a {
                                         .image-container:hover .profile-picture-bottom{
                                           transform: translateX(-5px);
                                         }
+                                        */
                                         .profile-picture-top {
                                           display: block;
                                           transition: .5s;
                                           transform: translateX(0px);
                                           width: 25vw;
+                                          z-index: 8;
                                         }
                                         .profile-picture-bottom {
                                           display: block;
@@ -200,10 +263,9 @@ a {
                                           font-size: 20px;
                                         }
                                         .welcome-text-description {
-                                          color: black;
                                           display: inline-block;
                                           text-align: center;
-                                          margin-top: 10vh;
+                                          margin-top: 5vh;
                                           height: 20vh;
                                           font-size: 20px;
                                         }
@@ -225,17 +287,20 @@ a {
                                           width: 100%;
                                           text-align: center;
                                           display: block;
-                                          color: black;
                                           }
                                           .research-text-title {
                                             display: inline-block;
-                                            color: black;
                                             font-size: 40px;
                                           }
                                         .research-text {
                                           display: inline-block;
                                           color: gray;
                                           margin-top: 10vh;
+                                        }
+                                        .research-descriptor {
+                                          margin-left: 9vw;
+                                          width: 20vw;
+                                          font-size: 15px;
                                         }
                                         .research-text-b {
                                           display: inline-block;
@@ -269,7 +334,7 @@ a {
                                           vertical-align: middle;
                                           height: 1.5px; transition: .5s;
                                           background-color: gray;
-                                          width: 0;"
+                                          width: 0;
                                         }
                                         .research {
                                           display: inline-block;
@@ -286,12 +351,12 @@ a {
                                         .research:hover {
                                           filter: brightness(50%);
                                         }
-                                        .research.image-1, .research.image-2, .research.image-3, .research.image-4, .research.image-5,.research.image-5 {
+                                        .research.image-1, .research.image-2, .research.image-3, .research.image-4, .research.image-5,.research.image-6 {
                                           display: inline-block;
                                           vertical-align: top;
                                           object-fit: cover;
                                           width: 38vw;
-                                          margin-top: 4vh;
+                                          margin-top: 6vh;
                                         }
                                         .research.image-2 {
                                           display: inline-block;
@@ -307,7 +372,6 @@ a {
                                         }
                                         .research.image-6 {
                                           display: inline-block;
-                                          margin-top: 4vh;
                                         }
 
 
@@ -474,8 +538,9 @@ a {
   text-align: center;
   width: 100%;
   background-color: white;
+  margin-top: 10vh;
 }
-                                                  .circle {
+                                                  .circle-positions {
                                                     height: 31vh;
                                                     width: 31vh;
                                                     margin: 10vh;
@@ -487,7 +552,7 @@ a {
                                                     cursor: pointer;
                                                     transform: translateX(-1vh) translateY(-.7vh);
                                                   }
-                                                  .circle:hover {
+                                                  .circle-positions:hover {
                                                     background-color: #cee1ff;
                                                     border: 2px solid #cee1ff;
                                                     transform: translateX(-1vh) translateY(-.7vh) scale(1.3);

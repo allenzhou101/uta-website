@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src = "main.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.0/TweenMax.min.js"></script>
+  <script src = "main.js"></script>
+
+</head>
+<body>
+  <script>
+  AOS.init();
+</script>
+
+  <div class = "nav-bar">
+    <a href = "index.html" class = "navigate link-one">Zhou Lab
+      <!--<div style = "display: inline-block; font-size: 10px;">The University of Texas at Arlington</div>-->
+    </a><!--
+    --><div class = "menu" onclick = "menuDown()">
+        <div class = "line1"></div>
+        <div class = "line2"></div>
+        <div class = "line3"></div>
+    </div>
+</div>
+<div class = "navigation-content">
+  <div class = "nav-con-container">
+  <a href = "research.html" class = "one">research</a><!--
+  --><a href = "news.html" class = "two">news</a><br><!--
+  --><a href = "news.html" class = "three">publications</a><!--
+  --><a href = "news.html" class = "four">members</a><br><!--
+  --><a href = "news.html" class = "five">facilities</a><!--
+  --><a href = "news.html" class = "six">classes</a><br><!--
+  --><a href = "news.html" class = "seven">positions</a><!--
+  --><a href = "#0" class = "eight" onclick="smoothScroll(document.getElementById('scroll-target2'))">contact</a>
+</div>
+</div>
+
+<div class = "top-container"  >
+  <div class = "image-container"  data-aos="fade-right" data-aos-duration="3000">
+    <img src = "images/professor-top.jpg" class = "profile-picture-top">
+    <img src = "images/professor-bottom.jpg" class = "profile-picture-bottom">
+  </div>
+
+  <div class = "welcome-text"  >
+    <div class = "name" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="500"><div style = "white-space: nowrap;">WELCOME TO</div> <div style = "white-space: nowrap;">ZHOU LAB</div></div>
+
+  </div>
+  <div class = "arrow" >
+    <div class = "scroll-down-arrow" onclick="smoothScroll(document.getElementById('scroll-target'))">
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class ="middle">
+
+  <div class = "research-container-outer" data-aos="fade">
+    <div class = "research-title-container">
+      <div class = "research-title" data-aos="fade">
+        RESEARCH HIGHLIGHTS
+
+      </div>
+      <div class = "welcome-text-description">
+        Led by Professor <div class = "welcome-hover a">Weidong Zhou</div>,
+        our group is working on various optoelectronic and nanophotonic devices
+        and integrated chips, with a mission towards scaling of these devices
+        with extreme performance and novel functionalities for integrated intelligent
+        silicon photonics and flexible/adaptive optoelectronics.
+      </div>
+
+      <div class = "research image-1"data-aos="fade">
+        <img src = "slideshow/biPCS-Schematic.jpg" height = "300px" width = "300px">
+        <div class = "research-descriptor">
+          <h1>Bi-Layer PCS Filter</h1>
+Coupled Bi-layer Photonic crystal Filters on Silicon
+        </div>
+      </div>
+      <div class = "research image-2" data-aos="fade">
+        <img src = "slideshow/MR-VCSEL schematic.jpg" height = "300px" width = "300px">
+        <div class = "research-descriptor">
+          <h1>MR-VCSEL On-chip MR-VCSEL</h1>
+
+Photonic crystal membrane-reflector vertical-cavity surface-emitting lasers (MR-VCSEL) for on-chip integration with silicon electronics
+        </div>
+      </div>
+      <div class = "research image-3"data-aos="fade">
+        <img src = "slideshow/PC graphene schematic.jpg" height = "300px" width = "300px">
+        <div class = "research-descriptor">
+          <h1>Graphene Si PC Graphene Si PC</h1>
+
+Graphene Total Absorption in Critically Coupled Photonic Crystal Cavities on Glass
+        </div>
+      </div>
+      <div class = "research image-4"data-aos="fade" >
+        <img src = "slideshow/Printing schematic.jpg" height = "300px" width = "300px">
+        <div class = "research-descriptor">
+          <h1>Printing schematic</h1>
+          What is this thing? IDK. DYK?
+        </div>
+      </div>
+      <div class = "research image-5"data-aos="fade" >
+        <img src = "slideshow/Si-InGaAs FPA.jpg" height = "300px" width = "300px">
+        <div class = "research-descriptor">
+          <h1>Multi-Band Imager</h1>
+
+          Transfer-Printed 4color Si-InGaAs Membrane Imager
+                </div>
+      </div>
+      <div class = "research image-6"data-aos="fade" >
+        <img src = "slideshow/Si-InGaAs FPA.jpg" height = "300px" width = "300px">
+        <div class = "research-descriptor">
+          <h1>Multi-Band Imager</h1>
+
+          Transfer-Printed 4color Si-InGaAs Membrane Imager
+                </div>
+      </div>
+
+      <!--<div class = "research-text" data-aos="fade">
+        <div class = "research-text-title">
+        Research Vision
+      </div>
+        <div class = "research-text-b">
+        Scaling of lasers, detectors, and solar cells with extreme performance
+        and novel functionalities for integrated silicon photonics and flexible optoelectronics.
+        </div>
+      </div>
+      <div class = "research-button" onmouseover = "arrowCreation()" onmouseout = "arrowCreation()" data-aos="fade">
+        view current research <div class = "arrow-line" style = "transform: translateY(-.5vh); display: inline-block; height: 2px; transition: .5s; background-color: gray; width: 0;"></div>&#8250;
+      </div>-->
+      <div class = "read-more-research" data-aos="fade" >
+        <a href = "research.html" >more
+          <div class = "arrow-line" ></div>&#8250;</a>
+      </div>
+    </div>
+
+  </div>
+  <div class = "publication-container" id = "scroll-target" >
+    <div style = "width: 100%; text-align: center; margin: 10vh 0 10vh 0; font-size: 50px;" data-aos="fade">
+      RECENT PUBLICATIONS
+    </div>
+    <div class = "publication-pictures" data-aos="fade">
+      <div class = "pub-pic-a">
+        <img src = "images/research-a.jpg">
+        <div class = "pub-text-1">
+          cool words here
+        </div>
+      </div><!--
+      --><div class = "pub-pic-b">
+        <img src = "images/research-b.jpg">
+        <div class = "pub-text-2">
+          more cool words here
+        </div>
+      </div><!--
+      --><div class = "pub-pic-c">
+        <img src = "images/research-d.jpg">
+        <div class = "pub-text-3">
+          even more cool words here
+        </div>
+      </div>
+    </div>
+    <div class = "read-more-research" data-aos="fade" >
+      <a href = "research.html" >more
+        <div class = "arrow-line" ></div>&#8250;</a>
+    </div>
+  </div>
+
+</div>
+<div class ="news-container">
+  <h1 class = "news-title" data-aos="fade">RECENT NEWS</h1>
+  <div class = "news-image-container" data-aos="fade">
+    <img src = "images/news-1.jpg" class =  "news-image one">
+    <div class = "news-description-1">
+      <div class = "news-decription-width">UTA researcher working to determine minimum energy use possible in lasers</div>
+    </div>
+  </div>
+  <div class = "news-image-container"data-aos="fade">
+    <img src = "images/news-4.jpg" class =  "news-image two">
+    <div class = "news-description-2">
+      <div class = "news-decription-width">Special Issue on Emerging Areas in Integrated Photonics</div>
+    </div>
+  </div>
+  <div class = "read-more-research" data-aos="fade" >
+    <a href = "research.html" >more
+      <div class = "arrow-line" ></div>&#8250;</a>
+  </div>
+  <div style = "margin: 10vh"></div>
+</div>
+
+<div class = "open-positions-container">
+  <div class="circle">
+
+ </div>
+ <img src = "circle-text.png" class = "circle-text">
+</div>
+<div class = "bottom-nav" id = "scroll-target2">
+  <div class = "group-1">
+    <div>Say Hello</div>
+    <div style = "color: gray;">wzhou@uta.edu<br>817-123-4567</div>
+  </div>
+  <div class = "group-2">
+    <div>UTA, Department of Electrical Engineering</div>
+    <div style = "color: gray;"> 202A NanoFAB Center
+
+500 South Cooper Street,<br> Arlington, Texas 76019-0072
+</div>
+  </div>
+  <div class = "group-3">
+
+    © Zhou Lab 2019
+
+  </div>
+<script>
+function backgroundChange(a) {
+
+  document.body.style.backgroundColor = 'black';
+  document.querySelector('.research-container-outer').style.backgroundColor = 'black';
+  var url = "url(\'news-" + a + ".jpg\')";
+  console.log('\"' + url + '\"');
+  document.querySelector('.news-box').style.backgroundImage = url;
+
+}
+function backgroundRemove() {
+  document.querySelector('.news-box').style.backgroundImage = 'none';
+  document.body.style.backgroundColor = '#f4f4f4';
+  document.querySelector('.research-container-outer').style.backgroundColor = 'white';
+}
+
+
+
+var arrowBoolean = true;
+function arrowCreation() {
+  if (arrowBoolean){
+    document.querySelector('.arrow-line').style.width = "20px";
+    //document.querySelector('.research-button').style.color = "gray"
+    arrowBoolean=false;
+  }
+  else {
+    document.querySelector('.arrow-line').style.width = "0px";
+    //document.querySelector('.research-button').style.color = "black"
+    arrowBoolean=true;
+  }
+
+}
+  function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+
+  function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  var HoverButton =
+  /*#__PURE__*/
+  function () {
+    function HoverButton(el) {
+      _classCallCheck(this, HoverButton);
+
+      this.el = el;
+      this.hover = false;
+      this.calculatePosition();
+      this.attachEventsListener();
+    }
+
+    _createClass(HoverButton, [{
+      key: "attachEventsListener",
+      value: function attachEventsListener() {
+        var _this = this;
+
+        window.addEventListener('mousemove', function (e) {
+          return _this.onMouseMove(e);
+        });
+        window.addEventListener('resize', function (e) {
+          return _this.calculatePosition(e);
+        });
+      }
+    }, {
+      key: "calculatePosition",
+      value: function calculatePosition() {
+        TweenMax.set(this.el, {
+          x: 0,
+          y: 0,
+          scale: 1
+        });
+        var box = this.el.getBoundingClientRect();
+        this.x = box.left + box.width * 0.5;
+        this.y = box.top + box.height * 0.5;
+        this.width = box.width;
+        this.height = box.height;
+      }
+    }, {
+      key: "onMouseMove",
+      value: function onMouseMove(e) {
+        var hover = false;
+        var hoverArea = this.hover ? 0.7 : 0.5;
+        var x = e.clientX - this.x;
+        var y = e.clientY - this.y;
+        var distance = Math.sqrt(x * x + y * y);
+
+        if (distance < this.width * hoverArea) {
+          hover = true;
+
+          if (!this.hover) {
+            this.hover = true;
+          }
+
+          this.onHover(e.clientX, e.clientY);
+        }
+
+        if (!hover && this.hover) {
+          this.onLeave();
+          this.hover = false;
+        }
+      }
+    }, {
+      key: "onHover",
+      value: function onHover(x, y) {
+        TweenMax.to(this.el, 0.4, {
+          x: (x - this.x) * 0.4,
+          y: (y - this.y) * 0.4,
+          scale: 1.15,
+          ease: Power2.easeOut
+        });
+        this.el.style.zIndex = 10;
+      }
+    }, {
+      key: "onLeave",
+      value: function onLeave() {
+        TweenMax.to(this.el, 0.7, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          ease: Elastic.easeOut.config(1.2, 0.4)
+        });
+        this.el.style.zIndex = 1;
+      }
+    }]);
+
+    return HoverButton;
+  }();
+/*
+  var btn1 = document.querySelector('.link-one');
+  new HoverButton(btn1);
+
+  var btn2 = document.querySelector('.nav.link-two');
+  new HoverButton(btn2);
+  var btn2 = document.querySelector('.nav.link-three');
+  new HoverButton(btn2);
+*/
+</script>
+<script>
+  //autoscroll
+  window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    scroll = function(c, a, b, i) {
+        i++; if (i > 50) return;
+        c.scrollTop = a + (b - a) / 50 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+    }
+
+    /*
+
+        <!--
+        -->
+        */
+  </script>
+</body>
+</html>

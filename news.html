@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <script src = "main.js"></script>
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+  </head>
+  <body>
+    <span id="circle" class="circle"></span>
+      <div class = "nav-bar">
+        <div class = "nav-1-container"><a href = "index.html" class = "navigate link-one">Zhou Lab
+          <!--<div style = "display: inline-block; font-size: 10px;">The University of Texas at Arlington</div>-->
+        </a></div><!--
+        --><div class = "menu-container"><div class = "menu" onmouseover = "cursorCircle()" onmouseout = "cursorCircle()" onclick = "menuDown()">
+            <div class = "line1"></div>
+            <div class = "line2"></div>
+            <div class = "line3"></div>
+        </div></div>
+    </div>
+    <div class = "navigation-content">
+      <div class = "nav-con-container">
+      <a href = "research.html" class = "one">research</a><!--
+      --><a href = "news.html" class = "two">news</a><br><!--
+      --><a href = "publications.html" class = "three">publications</a><!--
+      --><a href = "members.html" class = "four">members</a><br><!--
+      --><a href = "facilities.html" class = "five">facilities</a><!--
+      --><a href = "classes.html" class = "six">classes</a><br><!--
+      --><a href = "positions.html" class = "seven">positions</a><!--
+      --><a href = "#0" class = "eight" onclick="smoothScroll(document.getElementById('scroll-target2'))">contact</a>
+    </div>
+    </div>
+
+
+
+
+
+
 
   <div class = "news">
     <div class = "news-left">
@@ -29,5 +61,36 @@
     </div>
   </div>
 
-</body>
-</html>
+
+
+
+
+
+
+
+    <div class = "open-positions-container">
+      <div class="circle-positions">
+
+     </div>
+     <img src = "circle-text.png" class = "circle-text">
+    </div>
+    <div class = "bottom-nav" id = "scroll-target2">
+      <div class = "group-1">
+        <div>Say Hello</div>
+        <div style = "color: gray;">wzhou@uta.edu<br>817-123-4567</div>
+      </div>
+      <div class = "group-2">
+        <div>UTA, Department of Electrical Engineering</div>
+        <div style = "color: gray;"> 202A NanoFAB Center
+
+    500 South Cooper Street,<br> Arlington, Texas 76019-0072
+    </div>
+      </div>
+      <div class = "group-3">
+
+        © Zhou Lab 2019
+
+      </div>
+    </div>
+  </body>
+  </html>

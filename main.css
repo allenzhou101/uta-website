@@ -55,7 +55,6 @@ a {
                                               text-align: left;
                                               pointer-events: auto;
                                               display: inline-block;
-                                              transition: .5s;
                                             }
                                             .navigate.link-one:hover {
                                               color: gray;
@@ -191,6 +190,9 @@ a {
                                         }
                                         .b-top {
                                           transform: translateX(12vw);
+                                        }
+                                        .top-change, .top-change2 {
+                                          display: inline-block;
                                         }
                                         /*
                                         .image-container:hover {
@@ -380,16 +382,19 @@ a {
                                           margin-top: 0vh;
                                         }
                                         .pub-pic-a {
+                                          vertical-align: top;
                                           width: 30%;
                                           display: inline-block;
                                           margin-left: 2.5%;
                                         }
                                         .pub-pic-b {
+                                          vertical-align: top;
                                           width: 30%;
                                           display: inline-block;
                                           margin: 0 2.5% 0 2.5%;
                                         }
                                         .pub-pic-c {
+                                          vertical-align: top;
                                           width: 30%;
                                           display: inline-block;
                                         }
@@ -399,11 +404,11 @@ a {
                                           object-fit: cover;
                                           filter: brightness(50%);
                                         }
-                                        .publication-pictures div {
+                                        .publication-pictures a {
                                           transition: .5s;
                                           cursor: pointer;
                                         }
-                                        .publication-pictures div:hover {
+                                        .publication-pictures a:hover {
                                           filter: sepia(100%);
                                         }
                                         .pub-text-1, .pub-text-2, .pub-text-3 {
@@ -700,3 +705,6 @@ a {
                                               font-size: 30px;
                                               pointer-events: none;
                                             }
+.contact-container {
+  height: 100vh;
+}

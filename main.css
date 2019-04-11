@@ -91,11 +91,12 @@ a {
                                                         transition: .3s;
                                                         float: right;
                                                     }
+
                                                     .nav-container-right {
                                                       transition: .5s;
                                                     }
                                                     .nav-container-right:hover a{
-                                                      color: gray;
+                                                      color: black;
                                                     }
                                                     .nav-container-right a:hover::after {
                                                       width: 0;
@@ -115,18 +116,20 @@ a {
                                         .welcome-text {
                                           display: inline-block;
                                           font-size: 15px;
-                                          width: 55vw;
-                                          margin-left: 5vw;
+                                          width: 100vw;
+                                          margin-left: 0vw;
+                                          overflow: hidden;
                                           text-align: left;
-                                          transform: translateY(-2vh);
+                                          transform: translateY(-10vh);
                                         }
 
                                         .name {
                                           font-size: 12vw;
                                           margin-top: 0vh;
+                                          width: 100vw;
+                                          left: 0;
                                           display: inline-block;
                                           pointer-events: none;
-
                                         }
 
                                         @keyframes fadeInNow {
@@ -137,30 +140,31 @@ a {
                                         .image-container {
                                           display: inline-block;
                                           position: absolute;
-                                          margin-left: 16vw;
-                                          margin-top: 4vh;
-
+                                          margin-left: 37.5vw;
+                                          margin-top: 55vh;
+                                          opacity: 0;
+                                          animation: fadeInNow 1s 1s forwards;
                                         }
                                         .image-flex {
                                           width: 25vw;
-                                          height: 63vh;
+                                          height: 60vh;
                                           overflow: hidden;
                                         }
                                         .image-container img {
-                                          filter: brightness(50%);
+                                          filter: hue-rotate(0deg);
                                         }
                                         .image-flex img {
-                                          height: 63vh;
+                                          height: 60vh;
                                         }
                                         .a-top, .b-top {
                                           transition: 0s;
                                           white-space: nowrap;
                                         }
                                         .a-top {
-                                          transform: translateX(-22vw);
+                                          margin-left: 5vw;
                                         }
                                         .b-top {
-                                          transform: translateX(12vw);
+                                          margin-left: 35vw;
                                         }
                                         .top-change, .top-change2 {
                                           display: inline-block;
@@ -214,12 +218,12 @@ a {
                                           height: 0;
                                           width: 2px;
                                           cursor: pointer;
-
                                           background-color: black;
                                           display: inline-block;
                                           position: relative;
                                           vertical-align: top;
                                           animation: jump 1s infinite;
+                                          display: none;
                                         }
                                         @keyframes jump {
 
@@ -419,7 +423,8 @@ a {
                                                     }
                                                     .news-image:hover {
                                                       filter: brightness(80%) grayscale(0) blur(0px);
-                                                      transform: scale(1);
+                                                      transform: scale(.95);
+
                                                     }
                                                     .news-description-1, .news-description-2 {
                                                       margin: 0vh 0 0 20%;
@@ -534,10 +539,11 @@ a {
                                                     transform: translateX(-1vh) translateY(-.7vh) scale(1.2);
                                                     box-shadow: 0px 0 4px 4px #cee1ff;
                                                   }
-                                                  .open-positions-container a:hover .circle-text{
+                                                  .open-positions-container a:hover .circle-text1{
                                                     animation-play-state: paused;
+                                                    filter: opacity(.5);
                                                   }
-                                                  .circle-text {
+                                                  .circle-text1 {
                                                     margin: 10vh;
                                                     height:50vh;
                                                     width: 50vh;
@@ -691,7 +697,7 @@ a {
 
 
                                                 .contact-container-inner{
-                                                  width: 60%;
+                                                  width: 300px;
                                                   margin-left: 20%;
                                                   margin-top: 30vh;
                                                 }
@@ -700,6 +706,10 @@ a {
                                                 }
                                                 .contact-description {
 
+                                                }
+                                                .circle-text {
+                                                  height: 300px;
+                                                  width: 300px;
                                                 }
                                                 .contact-email {
                                                   width: 100%;

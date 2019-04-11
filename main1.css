@@ -1,0 +1,715 @@
+body {
+  margin: 0;
+  color: black;
+  background-color: #f4f4f4;
+  font-family: 'Playfair Display', serif;
+  transition: .5s;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.circle {
+	position: absolute;
+  border: solid 1px #ccc;
+	width: 60px;
+	height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+  animation:fadeIn 2s .5s forwards;
+}
+hr {
+  border: .5px solid black;
+}
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.nav-bar {
+  width: 90%;
+  margin-left: 5%;
+  vertical-align: center;
+  position: absolute;
+  white-space: nowrap;
+}
+                                                    .nav-container-left {
+                                                      font-size: 2vw;
+                                                      width: 15%;
+                                                      font-weight: 200;
+                                                      display: inline-block;
+                                                    }
+                                                    .nav-container-middle {
+                                                      width: 70%;
+                                                      font-size: 1.3vw;
+                                                      text-align: center;
+                                                      display: inline-block;
+                                                    }
+                                                    .nav-container-middle a{
+                                                      margin: 2vw;
+                                                      transition: .5s;
+                                                    }
+                                                    .nav-container-middle a::after {
+                                                        content: '';
+                                                        display: block;
+                                                        width: 0;
+                                                        height: .1vw;
+                                                        background: black;
+                                                        transition: .3s;
+                                                        float: right;
+                                                    }
+                                                    .nav-container-middle a:hover::after {
+                                                      width: 100%;
+                                                      transform: translateY(.5vh);
+                                                      float: left;
+                                                    }
+                                                    .nav-container-middle a:hover {
+                                                      color: black;
+                                                      transform: translateY(-.5vh);
+                                                    }
+
+                                                    .nav-container-right {
+                                                      text-align: right;
+                                                      font-size: 2vw;
+                                                      width: 15%;
+                                                      display: inline-block;
+                                                    }
+                                                    .nav-container-right a::after {
+                                                        content: '';
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: .1vw;
+                                                        background: black;
+                                                        transition: .3s;
+                                                        float: right;
+                                                    }
+                                                    .nav-container-right {
+                                                      transition: .5s;
+                                                    }
+                                                    .nav-container-right:hover a{
+                                                      color: gray;
+                                                    }
+                                                    .nav-container-right a:hover::after {
+                                                      width: 0;
+                                                      background: gray;
+                                                      float: left;
+                                                    }
+
+
+.top-container {
+  padding-top: 20vh;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 5vh;
+  /*opacity: 0;
+  animation: fadeIn 1s .25s forwards;*/
+}
+                                        .welcome-text {
+                                          display: inline-block;
+                                          font-size: 15px;
+                                          width: 55vw;
+                                          margin-left: 5vw;
+                                          text-align: left;
+                                          transform: translateY(-2vh);
+                                        }
+
+                                        .name {
+                                          font-size: 12vw;
+                                          margin-top: 0vh;
+                                          display: inline-block;
+                                          pointer-events: none;
+
+                                        }
+
+                                        @keyframes fadeInNow {
+                                          100% {
+                                            opacity: 1;
+                                          }
+                                        }
+                                        .image-container {
+                                          display: inline-block;
+                                          position: absolute;
+                                          margin-left: 16vw;
+                                          margin-top: 4vh;
+
+                                        }
+                                        .image-flex {
+                                          width: 25vw;
+                                          height: 63vh;
+                                          overflow: hidden;
+                                        }
+                                        .image-container img {
+                                          filter: brightness(50%);
+                                        }
+                                        .image-flex img {
+                                          height: 63vh;
+                                        }
+                                        .a-top, .b-top {
+                                          transition: 0s;
+                                          white-space: nowrap;
+                                        }
+                                        .a-top {
+                                          transform: translateX(-22vw);
+                                        }
+                                        .b-top {
+                                          transform: translateX(12vw);
+                                        }
+                                        .top-change, .top-change2 {
+                                          display: inline-block;
+                                        }
+                                        /*
+                                        .image-container:hover {
+                                          filter: brightness(80%);
+                                        }
+                                        .image-container:hover .profile-picture-top{
+                                          transform: translateX(5px);
+                                        }
+                                        .image-container:hover .profile-picture-bottom{
+                                          transform: translateX(-5px);
+                                        }
+                                        */
+                                        .profile-picture-top {
+                                          display: block;
+                                          transition: .5s;
+                                          transform: translateX(0px);
+                                          width: 25vw;
+                                          z-index: 8;
+                                        }
+                                        .profile-picture-bottom {
+                                          display: block;
+                                          transition: .5s;
+                                          transform: translateX(0px);
+                                          width: 25vw;
+                                        }
+
+                                        .welcome-hover {
+                                          color: #186c96;
+                                          cursor: pointer;
+                                          display: inline-block;
+                                          border-bottom: 2px solid transparent;
+                                        }
+                                        .welcome-hover:hover {
+                                          transition: .5s;
+                                          color: gray;
+                                          border-bottom: 2px solid gray;
+                                          transform: translateY(-5px);
+                                        }
+                                        .arrow {
+                                          margin-top: 2vh;
+                                          height: 10vh;
+                                          width: 100%;
+                                          text-align: center;
+                                          transition: .5s;
+                                          font-size: 100px;
+                                        }
+                                        .scroll-down-arrow {
+                                          height: 0;
+                                          width: 2px;
+                                          cursor: pointer;
+
+                                          background-color: black;
+                                          display: inline-block;
+                                          position: relative;
+                                          vertical-align: top;
+                                          animation: jump 1s infinite;
+                                        }
+                                        @keyframes jump {
+
+                                          100% {
+                                            height: 10vh;
+                                          }
+                                        }
+
+
+.middle {
+}
+                                        h1 {
+                                          margin: 0;
+                                          font-size: 20px;
+                                        }
+                                        .welcome-text-description {
+                                          display: inline-block;
+                                          text-align: center;
+                                          margin-top: 5vh;
+                                          height: 20vh;
+                                          font-size: 20px;
+                                        }
+                                        .research-container-outer {
+                                          background-color: transparent;
+                                          width: 100%;
+                                          transition: .5s;
+                                        }
+                                        .research-title-container {
+                                          margin: 15vh 0 0 10vw;
+                                          width: 80vw;
+                                          display: inline-block;
+                                          font-size: 20px;
+                                          text-align: center;
+                                        }
+                                        .research-title{
+                                          white-space: nowrap;
+                                          font-size: 50px;
+                                          width: 100%;
+                                          text-align: center;
+                                          display: block;
+                                          }
+                                          .research-text-title {
+                                            display: inline-block;
+                                            font-size: 40px;
+                                          }
+                                        .research-text {
+                                          display: inline-block;
+                                          color: gray;
+                                          margin-top: 10vh;
+                                        }
+                                        .research-descriptor {
+                                          margin-left: 9vw;
+                                          width: 20vw;
+                                          font-size: 15px;
+                                        }
+                                        .research-text-b {
+                                          display: inline-block;
+                                        }
+                                        .research-button {
+                                          cursor: pointer;
+                                          font-size: 20px;
+                                          margin: 15vh 0 0 0
+                                        }
+                                        .research-arrow {
+                                          filter: invert(100%);
+                                          height: 10vh;
+                                        }
+                                        .read-more-research {
+                                          width: 100%;
+                                          text-align: center;
+                                          margin-top: 5vh;
+                                          margin-bottom: 5vh;
+                                        }
+                                        .read-more-research a {
+                                          transition: .25s;
+                                        }
+                                        .read-more-research:hover a{
+                                          color: gray;
+                                        }
+                                        .read-more-research:hover .arrow-line{
+                                          width: 20px;
+                                        }
+                                        .arrow-line {
+                                          display: inline-block;
+                                          vertical-align: middle;
+                                          height: 1.5px; transition: .5s;
+                                          background-color: gray;
+                                          width: 0;
+                                        }
+                                        .research {
+                                          display: inline-block;
+                                          transition: .25s !important;
+                                          cursor: pointer;
+                                        }
+                                        .research img{
+                                          padding: 4vh;
+                                          background-color: white;
+                                          text-align: center;
+                                          margin-bottom: 1vh;
+                                        }
+
+                                        .research:hover {
+                                          filter: brightness(50%);
+                                        }
+                                        .research.image-1, .research.image-2, .research.image-3, .research.image-4, .research.image-5,.research.image-6 {
+                                          display: inline-block;
+                                          vertical-align: top;
+                                          object-fit: cover;
+                                          width: 38vw;
+                                          margin-top: 6vh;
+                                        }
+                                        .research.image-2 {
+                                          display: inline-block;
+                                        }
+                                        .research.image-3 {
+                                          display: inline-block;
+                                        }
+                                        .research.image-4 {
+                                          display: inline-block;
+                                        }
+                                        .research.image-5 {
+                                          display: inline-block;
+                                        }
+                                        .research.image-6 {
+                                          display: inline-block;
+                                        }
+
+
+                                        .publication-container {
+                                          height: 125vh;
+                                          margin-top: 0vh;
+                                        }
+                                        .pub-pic-a {
+                                          vertical-align: top;
+                                          width: 30%;
+                                          display: inline-block;
+                                          margin-left: 2.5%;
+                                        }
+                                        .pub-pic-b {
+                                          vertical-align: top;
+                                          width: 30%;
+                                          display: inline-block;
+                                          margin: 0 2.5% 0 2.5%;
+                                        }
+                                        .pub-pic-c {
+                                          vertical-align: top;
+                                          width: 30%;
+                                          display: inline-block;
+                                        }
+                                        .pub-pic-a img, .pub-pic-b img, .pub-pic-c img {
+                                          width: 100%;
+                                          height: 80vh;
+                                          object-fit: cover;
+                                          filter: brightness(50%);
+                                        }
+                                        .publication-pictures a {
+                                          transition: .5s;
+                                          cursor: pointer;
+                                        }
+                                        .publication-pictures a:hover {
+                                          filter: sepia(100%);
+                                        }
+                                        .pub-text-1, .pub-text-2, .pub-text-3 {
+                                          font-size: 25px;
+                                        }
+
+
+.news-container {
+  background-color: transparent;
+}
+
+                                                    .news-title {
+                                                      width: 60%;
+                                                      margin: 10vh 0 5vh 20%;
+                                                      font-size: 60px;
+                                                      text-align: center;
+                                                      font-weight: normal;
+                                                    }
+
+                                                    .news-image {
+                                                      width: 60%;
+                                                      height: 40vh;
+                                                      margin: 0vh 0 0 20%;
+                                                      transition: .5s;
+                                                      object-fit: cover;
+                                                      filter: brightness(50%) grayscale(100%) blur(1px);
+                                                      cursor: pointer;
+                                                    }
+                                                    .news-image.one {
+
+                                                    }
+
+                                                    .news-image.two {
+
+                                                      margin: 5vh 0 0 20%;
+
+                                                    }
+                                                    .news-image:hover {
+                                                      filter: brightness(80%) grayscale(0) blur(0px);
+                                                      transform: scale(1);
+                                                    }
+                                                    .news-description-1, .news-description-2 {
+                                                      margin: 0vh 0 0 20%;
+                                                      width: 60%;
+                                                      color: white;
+                                                      vertical-align: top;
+                                                      text-align: center;
+                                                      font-size: 30px;
+                                                      transform: translateY(-28vh);
+                                                      pointer-events: none;
+                                                    }
+                                                    .news-decription-width {
+                                                      width: 40vw;
+                                                      display: inline-block;
+                                                    }
+                                                    .news-read-more {
+                                                      margin: 0vh 0 10vh 20%;
+                                                      font-size: 40px;
+                                                      transition: .5s;
+                                                      display: inline-block;
+                                                      cursor: pointer;
+                                                    }
+                                                    .news-read-more:hover {
+                                                      color: gray;
+                                                    }
+
+.news {
+  height: 80vh;
+  border-top: 1px solid gray;
+}
+                                      .news-left {
+                                        width: 10%;
+                                        display: inline-block;
+                                        height: 80vh;
+                                        border-right: 1px solid gray;
+                                        transition: .5s;
+                                        position: absolute;
+                                        color: white;
+                                        background-color: black;
+                                      }
+                                      @keyframes infiniteScroll {
+                                        50% {
+                                          transform: translateX(-21vh);
+                                        }
+                                        100% {
+                                          transform: translateX(21vh);
+                                        }
+                                      }
+                                      .news-left h2{
+                                        font-weight: normal;
+                                        margin: 0;
+                                        transform-origin: bottom left;
+                                        transform: rotate(90deg);
+                                      }
+                                      .news-heading {
+                                        font-size: 100px;
+                                      }
+                                      .news-right {
+                                        transition: .5s;
+                                        color: white;
+                                        font-size: 20px;
+                                        display: inline-block;
+                                        height: 80vh;
+                                        width: 90%;
+                                        margin-left: 10%;
+                                        position: absolute;
+                                        background-image: url(news-d.jpg);
+                                        background-size: cover;
+                                        background-position: center;
+                                        overflow: hidden;
+                                      }
+                                      .news-list {
+                                        list-style: none;
+                                        text-align: center;
+                                        width: 100%;
+                                        height: 80%;
+
+                                      }
+                                      .news-list li {
+                                        margin: 12.5vh;
+                                      }
+                                      .news-list li a {
+                                        cursor: pointer;
+                                        color: white;
+
+                                        transition: .25s;
+                                      }
+                                      .news-list li a:hover {
+                                        color: gray;
+                                      }
+.open-positions-container {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  margin-top: 10vh;
+}
+                                                  .circle-positions {
+                                                    height:52vh;
+                                                    width: 52vh;
+                                                    margin: 10vh;
+                                                    border-radius: 50%;
+                                                    border: 2px solid black;
+                                                    display: inline-block;
+                                                    position: absolute;
+                                                    transition: .5s;
+                                                    cursor: pointer;
+                                                    transform: translateX(-1vh) translateY(-1vh);
+                                                  }
+                                                  .circle-positions:hover {
+                                                    background-color: #cee1ff;
+                                                    border: 2px solid #cee1ff;
+                                                    transform: translateX(-1vh) translateY(-.7vh) scale(1.2);
+                                                    box-shadow: 0px 0 4px 4px #cee1ff;
+                                                  }
+                                                  .open-positions-container a:hover .circle-text{
+                                                    animation-play-state: paused;
+                                                  }
+                                                  .circle-text {
+                                                    margin: 10vh;
+                                                    height:50vh;
+                                                    width: 50vh;
+                                                    animation-name: rotate;
+                                                    animation-duration: 15s;
+                                                    animation-iteration-count: infinite;
+                                                    animation-timing-function: linear;
+                                                    animation-play-state: running;
+
+                                                    pointer-events: none;
+                                                  }
+                                                  @keyframes rotate {
+                                                    100% {
+                                                      transform: rotate(360deg);
+                                                    }
+                                                  }
+
+
+
+
+
+.bottom-nav {
+  height: 25vh;
+  width: 100%;
+  padding-top: 5vh;
+  background-color: white;
+}
+                                                          .group-1, .group-2, .group-3 {
+                                                            width: 33%;
+                                                            text-align: center;
+                                                            margin-top: 0vh;
+                                                            display: inline-block;
+                                                          }
+
+
+
+
+  .research-container {
+    height: 270vh;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 0vh;
+
+  }
+                                            .title {
+                                              font-size: 60px;
+                                              display: inline-block;
+                                              transform: translateY(20vh);
+                                              opacity: 0;
+                                              animation: fadeIn 1s .3s forwards;
+                                            }
+                                            .paper-text-1 {
+                                              text-align: center;
+                                              transform: translateY(-70vh);
+                                              width: 30vw;
+                                              margin-left: 5vw;
+                                              font-size: 30px;
+                                              pointer-events: none;
+                                            }
+                                            .paper-1 {
+                                              opacity: 0;
+                                              animation: fadeIn 1s .8s forwards;
+                                              color: white;
+                                              margin-left: 40vw;
+                                              overflow: hidden;
+                                              margin-top: 0vh;
+                                              width: 40vw;
+                                              height: 90vh;
+                                              transition: .5s;
+                                            }
+                                            .paper-1:hover {
+                                              transform: scale(.95);
+                                            }
+                                            .paper-1:hover img {
+                                              filter: brightness(30%);
+                                              transform: scale(1.05);
+                                            }
+                                            .paper-1 img {
+                                              display: inline-block;
+                                              filter: brightness(50%);
+                                              width: 40vw;
+                                              cursor: pointer;
+                                              transition: .5s;
+                                            }
+                                            .paper-2 {
+                                              color: white;
+                                              margin-top: 0vh;
+                                              overflow: hidden;
+                                              width: 40vw;
+                                              height: 90vh;
+                                              transition: .5s;
+                                            }
+                                            .paper-2:hover {
+                                              transform: scale(.95);
+                                            }
+                                            .paper-2:hover img {
+                                              filter: brightness(30%);
+                                              transform: scale(1.05);
+                                            }
+                                            .paper-2 img {
+                                              display: inline-block;
+                                              filter: brightness(50%);
+                                              width: 40vw;
+                                              cursor: pointer;
+                                              transition: .5s;
+                                            }
+                                            .paper-text-2 {
+                                              text-align: center;
+                                              transform: translateY(-40vh);
+                                              width: 30vw;
+                                              margin-left: 5vw;
+                                              font-size: 30px;
+                                              pointer-events: none;
+                                            }
+
+
+                                            .paper-3 {
+                                              color: white;
+                                              margin-top: -30vh;
+                                              margin-left: 40vw;
+                                              overflow: hidden;
+                                              width: 40vw;
+                                              height: 90vh;
+                                              transition: .5s;
+                                            }
+                                            .paper-3:hover {
+                                              transform: scale(.95);
+                                            }
+                                            .paper-3:hover img {
+                                              filter: brightness(30%);
+                                              transform: scale(1.05);
+                                            }
+                                            .paper-3 img {
+                                              display: inline-block;
+                                              filter: brightness(50%);
+                                              width: 40vw;
+                                              cursor: pointer;
+                                              transition: .5s;
+                                            }
+                                            .paper-text-3 {
+                                              text-align: center;
+                                              transform: translateY(-50vh);
+                                              width: 30vw;
+                                              margin-left: 5vw;
+                                              font-size: 30px;
+                                              pointer-events: none;
+                                            }
+.contact-container {
+  height: 100vh;
+}
+
+
+                                                .contact-container-inner{
+                                                  width: 60%;
+                                                  margin-left: 20%;
+                                                  margin-top: 30vh;
+                                                }
+                                                .contact-title {
+                                                  font-size: 50px;
+                                                }
+                                                .contact-description {
+
+                                                }
+                                                .contact-email {
+                                                  width: 100%;
+                                                  height: 100vh;
+                                                  vertical-align: middle;
+                                                  text-align: center;
+                                                }
+                                                .email {
+                                                  margin-top: 40vh;
+                                                  font-size: 10vh;
+                                                  font-weight: lighter;
+                                                  display: inline-block;
+                                                }

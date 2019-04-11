@@ -1,4 +1,5 @@
 //https://codepen.io/m2rt/pen/KwXgaG?editors=0110
+/*
 var menuBoolean = true;
 function menuDown() {
   if (menuBoolean) {
@@ -25,3 +26,4 @@ document.querySelector('.line3').style.transform = "rotate(0)";
   }
 
 }
+*/

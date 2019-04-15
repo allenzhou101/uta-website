@@ -155,6 +155,7 @@ a {
                                         }
                                         .image-flex img {
                                           height: 60vh;
+                                          filter: hue-rotate(0deg);
                                         }
                                         .a-top, .b-top {
                                           transition: 0s;
